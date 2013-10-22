@@ -9,12 +9,19 @@ tagline: About me
 ##Who am I?
 <div>
 <img src="http://www.gravatar.com/avatar/455156cdeb3a3e269964b8f3698d8ad7.png" alt="avatar of hyspace" title="Gavatar" height="80" width="80" style="float:left;margin:6px 15px 15px 0;border-radius:5px;" />
-My name is Shan Zhou ( Shawn ), a front-end engineer working at [GREE co., Ltd](http://gree.co.jp).
+My name is Shan Zhou ( Shawn ), a front-end engineer.
 </div>
 
-23 years old, lived in Beijing.
+<p><script>
+(function () {
+	var birthday=new Date(1989,1,4); 
+	var d=new Date(); 
+	var age = d.getFullYear()-birthday.getFullYear()-((d.getMonth()<birthday.getMonth()|| d.getMonth()==birthday.getMonth() && d.getDate()<birthday.getDate())?1:0);
+	document.write(age);
+})();
+</script> years old, lived in Beijing.</p>
 
-Focused on front-end technics, and also interested in consumer electronics and web designing.
+Focused on software development, especially front-end development, and also interested in consumer electronics and web designing.
 
 Speak Chinese, English and Japanese. Love Anime, Game and Travelling.
 
