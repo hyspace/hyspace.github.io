@@ -1,9 +1,9 @@
 $(function(){
   //line-number
-  var l = 0,i;
   var $lineNumber = $('#line-number');
   var $content = $('#content');
   var rewriteLinenumber = function(){
+    var l = 0,i;
     $lineNumber.empty();
     $('#content > *').each(function(){
       var height = $(this).outerHeight(true);
