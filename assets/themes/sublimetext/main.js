@@ -66,9 +66,11 @@ $(function(){
       $minimap.removeClass('scrolling');
     },2000)
   })
-  $( window ).resize(function() {
+  var resize = function() {
     sh1 = $main.height()*zoom;
     $minimapHandler.height(sh1);
-  });
+  }
+  $( window ).resize(resize);
+  $( window ).load(resize);
 })
 console.log('I already have a grilfriend.');
