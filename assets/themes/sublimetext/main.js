@@ -71,6 +71,6 @@ $(function(){
     $minimapHandler.height(sh1);
   }
   $( window ).resize(resize);
-  body.onload=resize;
+  document.body.onload=resize;
 })
 console.log('I already have a grilfriend.');
