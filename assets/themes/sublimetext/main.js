@@ -22,7 +22,7 @@ $(function(){
   var $minimapMask = $('#minimap-mask');
   var $main = $('#main');
   var zoom = $minimapContent.width() / $content.width();
-  var sh1 = $main.height()*zoom;
+  var sh1 = Math.min($main.height(),$content.height())*zoom;
   var h = $content.outerHeight(true);
   $contentCopy.attr('id','content-copy').css({
     '-webkit-transform':'scale('+zoom+','+zoom+')'
