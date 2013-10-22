@@ -69,6 +69,7 @@ $(function(){
   var resize = function(e) {
     console.log(e.target)
     sh1 = $main.height()*zoom;
+    h = $content.outerHeight(true);
     $minimapHandler.height(sh1);
   }
   $(window).resize(resize);
