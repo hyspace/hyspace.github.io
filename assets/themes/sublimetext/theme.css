@@ -164,7 +164,7 @@ a.system{
 }
 #side-bar li{
 	line-height: 16px;
-	padding:1px 0;
+	padding:2px 0 0;
 }
 #side-bar .side-bar-folder{
 	display: block;
@@ -182,7 +182,7 @@ a.system{
 #side-bar .side-bar-file:hover a,
 #side-bar .side-bar-file.active a{
 	color: rgb(230,230,230);
-	text-shadow: 0 1px 0 #000;
+	text-shadow: 0 -1px 0 #000;
 }
 #side-bar .side-bar-1{
 	padding-left: 23px;
