@@ -321,6 +321,10 @@ code {
 	padding: 2px 5px;
 	border-radius: 3px;
 }
+pre code{
+	padding: 0;
+	border: none;
+}
 pre{
 	background-color: #000;
 	border-radius: 3px;
