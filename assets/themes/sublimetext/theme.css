@@ -42,6 +42,7 @@ body,html{
 	left:0;
 	bottom:22px;
 	width:265px;
+	z-index: 101;
 }
 #line-number{
 	position: absolute;
@@ -63,6 +64,7 @@ body,html{
 	left:265px;
 	right:0;
 	height: 28px;
+	z-index: 100;
 }
 #main{
 	position: absolute;
@@ -109,7 +111,7 @@ body,html{
 	top: 0;
 	border-radius: 3px;
 	opacity: 0;
-	background-color: rgba(255,255,255,0.2);
+	background-color: rgba(255,255,255,0.1);
 	width: 75px;
 	transition:opacity 0.5s;
 }
@@ -124,6 +126,7 @@ body,html{
 	left: 0;
 	right: 0;
 	padding: 3px 8px 0;
+	z-index: 102;
 }
 
 .system{
@@ -201,6 +204,17 @@ a.system{
 #tabs{
 	background: url(tabset-background.png);
 	line-height: 0;
+	box-shadow: 0 3px 5px #000;
+}
+#tabs::before{
+	content: ' ';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: rgba(0,0,0,0.2);
+	left:0;
+	top:0;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 #tabs h1{
 	display: inline-block;
