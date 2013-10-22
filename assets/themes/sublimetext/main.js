@@ -3,17 +3,21 @@ $(function(){
   var l = 0,i;
   var $lineNumber = $('#line-number');
   var $content = $('#content');
-  $('#content > *').each(function(){
-    var height = $(this).outerHeight(true);
-    var n = Math.floor(height / 25);
-    var m = height % 25;
-    for(i=0;i<n;i++){
-      l++;
-      var p = $('<p></p>').text(l)
-      if(i == n - 1 && m > 0)p.height(25+m);
-      $lineNumber.append(p);
-    }
-  })
+  var rewriteLinenumber = function(){
+    $lineNumber.empty();
+    $('#content > *').each(function(){
+      var height = $(this).outerHeight(true);
+      var n = Math.floor(height / 25);
+      var m = height % 25;
+      for(i=0;i<n;i++){
+        l++;
+        var p = $('<p></p>').text(l)
+        if(i == n - 1 && m > 0)p.height(25+m);
+        $lineNumber.append(p);
+      }
+    })
+  }
+  rewriteLinenumber();
   //minimap
   var $contentCopy = $content.clone();
   var $minimap = $('#minimap')
@@ -67,12 +71,14 @@ $(function(){
     },2000)
   })
   var resize = function(e) {
-    console.log(e.target)
     sh1 = $main.height()*zoom;
     h = $content.outerHeight(true);
     $minimapHandler.height(sh1);
   }
   $(window).resize(resize);
-  $('#content img').on('load',resize)
+  $('#content img').on('load',function(){
+    rewriteLinenumber();
+    resize();
+  })
 })
 console.log('I already have a grilfriend.');
