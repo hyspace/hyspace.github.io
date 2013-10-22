@@ -1,6 +1,6 @@
 ---
 layout: post
-title: New jekyll theme: sublime text
+title: New jekyll theme - sublime text
 category: develop
 tags: 
   - theme
