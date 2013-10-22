@@ -60,7 +60,7 @@
   
     {% if forloop.first %}
       <li><span class="side-bar-1 side-bar-folder">{{this_year}} - {{this_month}}</span>
-        <ul class="side-bar-group">
+        <ul class="side-bar-group" style="display:none;">
     {% endif %}
     {% if page.url == post.url %}
           <li class="side-bar-2 side-bar-file active"><a href="{{ BASE_PATH }}{{post.url}}">{{post.title}}.html</a></li>
@@ -76,13 +76,13 @@
         </ul>
       </li>
       <li><span class="side-bar-1 side-bar-folder">{{next_year}} - {{next_month}}</span>
-        <ul class="side-bar-group">
+        <ul class="side-bar-group" style="display:none;">
       {% else %}    
         {% if this_month != next_month %}
         </ul>
       </li>
       <li><span class="side-bar-1 side-bar-folder">{{next_year}} - {{next_month}}</span>
-        <ul class="side-bar-group">
+        <ul class="side-bar-group" style="display:none;">
         {% endif %}
       {% endif %}
     {% endif %}

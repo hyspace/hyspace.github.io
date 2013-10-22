@@ -80,5 +80,11 @@ $(function(){
     rewriteLinenumber();
     resize();
   })
+  //folder
+  $('.side-bar-group').on('click','.side-bar-folder',function(){
+    var $this = $(this);
+    $this.toggleClass('active');
+    $this.next().slideToggle();
+  })
 })
 console.log('I already have a grilfriend.');

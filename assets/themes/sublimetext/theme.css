@@ -170,8 +170,27 @@ a.system{
 	display: block;
 	color: rgb(230,230,230);
 	opacity: 0.8;
-	background: url(fold-open-hover.png) no-repeat 6px -1px;
 	padding-left: 25px;
+	position: relative;
+}
+#side-bar .side-bar-folder::before{
+	content: ' ';
+	height: 12px;
+	width: 12px;
+	position: absolute;
+	background: url(fold-open-hover.png) no-repeat center center;
+	left: 7px;
+	top:1px;
+	-webkit-transform-origin:50% 50%;
+	transform-origin:50% 50%;
+	-webkit-transition:-webkit-transform 0.3s;
+	transition:transform 0.3s;
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+#side-bar .side-bar-folder.active::before{
+	-webkit-transform: rotate(0);
+	transform: rotate(0);
 }
 #side-bar .side-bar-folder:hover{
 	opacity: 1;
