@@ -94,6 +94,25 @@ body,html{
 	top:28px;
 	right: 20px;
 }
+#minimap-mask{
+	width:75px;
+	position: fixed;
+	overflow: hidden;
+	top:28px;
+	right: 20px;
+	bottom: 22px;
+	cursor: default;
+}
+#minimap-handler{
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 3px;
+	opacity: 0;
+	background-color: rgba(255,255,255,0.2);
+	width: 75px;
+	transition:opacity 0.5s;
+}
 #content-copy{
 	margin: 0;
 	-webkit-transform-origin: 0% 0%;
@@ -176,9 +195,6 @@ a.system{
 
 
 /*theme*/
-#line-number{
-	
-}
 #line-number p{
 	padding: 0;
 }
@@ -204,23 +220,6 @@ a.system{
 #minimap:hover #minimap-handler,
 #minimap.scrolling #minimap-handler{
 	opacity: 1;
-}
-#minimap-mask{
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 75px;
-	cursor: default;
-}
-#minimap-handler{
-	position: absolute;
-	left: 0;
-	top: 0;
-	border-radius: 3px;
-	opacity: 0;
-	background-color: rgba(255,255,255,0.2);
-	width: 75px;
-	transition:opacity 0.5s;
 }
 #status-bar{
 	background: url(status-bar-background.png);

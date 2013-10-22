@@ -28,7 +28,6 @@ $(function(){
     '-webkit-transform':'scale('+zoom+','+zoom+')'
   }).appendTo($minimapContent);
   $minimapHandler.height(sh1);
-  $minimapMask.height(h*zoom);
   var moveMinimapHandler = function(y2){
     if(y2 < 0){
       $minimapHandler.css('top',0)
