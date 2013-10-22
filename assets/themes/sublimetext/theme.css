@@ -215,6 +215,10 @@ a.system{
 	white-space: nowrap;
 	overflow: hidden;
 }
+.tag_box,
+.pagination{
+	padding-left: 0;
+}
 
 
 /*theme*/
@@ -300,11 +304,11 @@ em, i {
 }
 strong, b {
 	font-weight: bold;
-	color: #C7AD75;
+	color: #7388A6;
 }
 small {
 	font-size: 0.6em;
-	color: #C7AD75;
+	color: #7388A6;
 }
 sup {
 	vertical-align: super;

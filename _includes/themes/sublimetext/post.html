@@ -9,7 +9,7 @@
 
 {% unless page.categories == empty %}
 <ul class="tag_box inline">
-  <li><i class="icon-folder-open"></i></li>
+  <li><strong>CATEGORY:</strong></li>
   {% assign categories_list = page.categories %}
   {% include JB/categories_list %}
 </ul>
@@ -17,7 +17,7 @@
 
 {% unless page.tags == empty %}
 <ul class="tag_box inline">
-  <li><i class="icon-tags"></i></li>
+  <li><strong>TAGS:</strong></li>
   {% assign tags_list = page.tags %}
   {% include JB/tags_list %}
 </ul>
