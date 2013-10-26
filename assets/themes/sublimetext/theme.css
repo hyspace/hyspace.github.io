@@ -132,7 +132,7 @@ body,html{
 
 .system{
 	font:normal 11px/18px Helvetica,Arial;
-	text-shadow: 0 -1px 0 #000;
+	text-shadow: 0 1px 0 #000;
 	cursor: default;
 	-moz-user-select: none;
   -webkit-user-select: none;
@@ -148,6 +148,7 @@ a.system{
 .system a:hover{
 	text-decoration: none;
 	border: none;
+	text-shadow: 0 1px 0 #000;
 }
 #side-bar{
 	background-color: #1e1e1e;
