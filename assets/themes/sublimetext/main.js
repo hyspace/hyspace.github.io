@@ -11,8 +11,9 @@ $(function(){
       var m = height % 25;
       for(i=0;i<n;i++){
         l++;
-        var p = $('<p></p>').text(l).append(p);
+        var p = $('<p></p>').text(l);
         if(i == n - 1 && m > 0)p.height(25+m);
+        $lineNumber.append(p);
       }
     })
   }
@@ -40,7 +41,7 @@ $(function(){
       $minimapHandler.css('top',y2+'px')
     }
   }
-  var move = function(){
+  var move = function(e){
     var y1 = e.offsetY;
     var y2 = y1 - sh1/2;
     var y = y2 / zoom;
@@ -67,7 +68,7 @@ $(function(){
     }
     t = setTimeout(function(){
       $minimap.removeClass('scrolling');
-    },1000)
+    },2000)
   })
   var resize = function(e) {
     sh1 = $main.height()*zoom;
@@ -81,8 +82,7 @@ $(function(){
   })
   //folder
   $('.side-bar-group').on('click','.side-bar-folder',function(){
-    var $this = $(this);
-    $this.toggleClass('active').next().slideToggle();
+    $(this).toggleClass('active').next().slideToggle();
   })
 })
 console.log('I already have a grilfriend.');
