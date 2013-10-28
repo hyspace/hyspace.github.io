@@ -28,6 +28,7 @@ $(function(){
   var zoom = $minimapContent.width() / $content.width();
   var sh1 = Math.min($main.height(),$content.height())*zoom;
   var h = $content.outerHeight(true);
+  $contentCopy.find('script').remove();
   $contentCopy.attr('id','content-copy').css({
     '-webkit-transform':'scale('+zoom+','+zoom+')'
   }).appendTo($minimapContent);
@@ -35,18 +36,21 @@ $(function(){
   var moveMinimapHandler = function(y2){
     if(y2 < 0){
       $minimapHandler.css('top',0)
+      return false;
     }else if(y2 > h*zoom - sh1){
       $minimapHandler.css('top',(h*zoom - sh1)+'px')
+      return false;
     }else{
       $minimapHandler.css('top',y2+'px')
+      return true;
     }
   }
   var move = function(e){
     var y1 = e.offsetY;
     var y2 = y1 - sh1/2;
     var y = y2 / zoom;
-    $main.scrollTop(y);
-    moveMinimapHandler(y2);
+    var scroll = moveMinimapHandler(y2);
+    if(scroll) $main.scrollTop(y);
   }
   $minimapMask.on('mousedown',function(e){
     $(this).on('mousemove',move);
@@ -71,7 +75,7 @@ $(function(){
     },2000)
   })
   var resize = function(e) {
-    sh1 = $main.height()*zoom;
+    sh1 = Math.min($main.height(),$content.height())*zoom;
     h = $content.outerHeight(true);
     $minimapHandler.height(sh1);
   }

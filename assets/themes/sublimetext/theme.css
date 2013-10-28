@@ -89,6 +89,12 @@ body,html{
   pointer-events:none;
   cursor: default;
 }
+#comment{
+	padding:25px 0 0 55px;
+}
+#disqus_thread{
+	width: 800px;
+}
 #minimap{
 	width:75px;
 	position: fixed;
@@ -263,6 +269,9 @@ a.system{
 }
 #content{
 	color: rgb(200,200,200);
+}
+#comment{
+	background-color: #333;
 }
 #minimap:hover #minimap-handler,
 #minimap.scrolling #minimap-handler{
