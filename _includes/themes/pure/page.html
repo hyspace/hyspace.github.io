@@ -1,0 +1,11 @@
+<article role="main">
+  <header class="article-header">
+    <h1>{{ page.title }}{% if page.tagline %}<small>{{ page.tagline }}</small>{% endif %}</h1>
+  </header>
+  <div class="article-content">
+    {{ content }}
+  </div>
+  <footer class="article-comments">
+    {% include JB/comments %}
+  </footer>
+</article>
