@@ -25,6 +25,10 @@
     "gulp": "^3.5.2",
     "coffee-script": "^1.7.1",
     "gulp-less": "^1.2.1",
-    "gulp-coffee": "^1.4.1"
+    "gulp-coffee": "^1.4.1",
+    "streamqueue": "0.0.5",
+    "gulp-concat": "^2.1.7",
+    "gulp-uglify": "^0.2.1",
+    "gulp-plumber": "^0.5.6"
   }
 }

@@ -1,0 +1,30 @@
+#main{
+  .day &{
+    background-color: white;
+  }
+}
+
+#menu-sidebar{
+  .day &{
+    background-color: @gray-dark;
+  }
+  a {
+    &:hover{
+      text-decoration: none;
+    }
+    .day &{
+      color: @gray-light;
+      &:hover{
+        color: @gray-lighter;
+      }
+    }
+  }
+}
+
+#btn-open-menu{
+  color: @gray;
+  &:hover,
+  &:active{
+    color: @gray-darker;
+  }
+}

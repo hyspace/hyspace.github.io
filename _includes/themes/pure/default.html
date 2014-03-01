@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <script>document.documentElement.className=Math.abs((new Date()).getHours-14)<=6?"theme-day":"theme-night"</script>
+  <script>document.documentElement.className=Math.abs((new Date()).getHours()-14)<=6?"day":"night"</script>
   <title>{{ page.title }}</title>
   {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
   <meta name="author" content="{{ site.author.name }}">
@@ -21,21 +21,33 @@
   <!-- atom & rss feed -->
   <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
   <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  <!-- favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  {{ content }}
-  <aside>
-    <button class="btn-menu"></button>
+  <div id="main">
+    {{ content }}
+    <div id="mask" data-toggle-menu></div>
+  </div>
+  <header id="header">
+    <button id="btn-open-menu" data-toggle-menu>_</button>
+  </header>
+  <aside id="menu-sidebar">
     <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="javascript:">Archive</a></li>
-        <li><a href="/">About</a></li>
+      <ul class="menu">
+        <li><a href="/"><i class="icon-cat"></i>Home</a></li>
+        <li><a href="javascript:"><i class="icon-book"></i>Archive</a></li>
+        <li><a href="/"><i class="icon-info-sign"></i>About</a></li>
       </ul>
     </nav>
+  </aside>
+  <aside id="inline-comments">
   </aside>
   <footer>
 
   </footer>
+  <script src="{{ ASSET_PATH }}/js/app.js"></script>
 </body>
 </html>

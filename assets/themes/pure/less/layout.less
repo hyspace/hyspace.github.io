@@ -1,0 +1,95 @@
+@article-width: 640px;
+@padding: 20px;
+@sidebar-width: 300px;
+@menubar-width: 150px;
+
+@screen-small: (@article-width + @padding * 2);
+@screen-medium: (@screen-small + @sidebar-width * 2);
+
+body{
+  &.menu-open {
+    overflow: hidden;
+  }
+}
+html,
+body,
+#main{
+  height: 100%;
+}
+
+#main{
+  .menu-open &{
+    .translate3d(@menubar-width, 0, 0);
+  }
+  overflow: auto;
+  position: relative;
+  z-index: 2;
+  .transition-transform(.15s ease-in-out);
+  @media (min-width: @screen-medium){
+    .menu-open &{
+      .translate(0, 0);
+    }
+    .transition-transform(none);
+  }
+  > article{
+    width: 100%;
+    padding: 0 @padding;
+    @media (min-width: @screen-small){
+      width: @article-width;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+}
+
+#menu-sidebar{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+  width: @menubar-width;
+  @media (min-width: @screen-medium){
+    .translate(-@menubar-width, 0);
+    .menu-open &{
+      .translate(0, 0);
+    }
+    .transition-transform(.15s ease-in-out);
+    z-index: 3;
+  }
+}
+
+#inline-comments{
+  position: absolute;
+  left:50%;
+  top:0;
+  margin-left: @article-width / 2;
+  width: @sidebar-width;
+  z-index: 2;
+}
+
+#mask{
+  display: none;
+  .menu-open &{
+    display: block;
+  }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+}
+
+#header{
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+}
+
+#btn-open-menu{
+  .transition(all .15s ease-in-out);
+  .menu-open &{
+    .translate(@menubar-width, 0);
+  }
+}
