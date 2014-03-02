@@ -11,7 +11,9 @@ do ->
   ".article-content > ol," +
   ".article-content > blockquote," +
   ".article-content > dl," +
-  ".article-content > pre")
+  ".article-content > pre," +
+  ".article-content > div"
+  )
 
   url = window.location.href
   .replace(window.location.hash,'')

@@ -49,16 +49,13 @@ article[role="main"],
   left: 0;
   bottom: 0;
   top: 0;
-  z-index: 1;
+  z-index: 3;
   width: @menubar-width;
   .translate(-@menubar-width, 0);
-  @media (max-width: @screen-medium){
-    .menu-open &{
-      .translate(0, 0);
-    }
-    .transition-transform(.15s ease-in-out);
-    z-index: 3;
+  .menu-open &{
+    .translate(0, 0);
   }
+  .transition-transform(.15s ease-in-out);
 }
 
 #inline-comments{

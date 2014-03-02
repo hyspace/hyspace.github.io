@@ -4,9 +4,7 @@
   time{
     float: right;
     color: @text-muted;
-  }
-  &:hover .article-tags{
-    opacity: 1;
+    font-size: @font-size-small;
   }
 }
 .article-comments{
@@ -16,11 +14,6 @@
   > .article-header{
     margin-top: (@line-height-computed);
     border-bottom: none;
-    opacity: 0.3;
-    .transition(opacity .15s);
-    &:hover{
-      opacity: 1;
-    }
   }
   margin-top: (@line-height-computed * 4);
   border-top: 1px solid @gray-lighter;
@@ -33,18 +26,37 @@
     margin-top: 5px;
     display: block;
   }
-  a:hover{
+  > a:hover{
     text-decoration: none;
   }
 }
 .article-tags{
-  opacity: 0.3;
   font-size: @font-size-small;
-  .transition(opacity .15s);
   line-height: @line-height-computed;
   .list-inline;
   .badge{
     font-size: @font-size-small * 0.6;
     vertical-align: top;
+  }
+  a{
+    opacity: 0.5;
+    .transition(opacity .15s);
+    &:hover{
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
+}
+.article-list{
+  .list-unstyled();
+  .article-header{
+    margin-top: @line-height-computed;
+    > a{
+      color: @text-color;
+      &:hover{
+        color: @brand-primary;
+        text-decoration: none;
+      }
+    }
   }
 }

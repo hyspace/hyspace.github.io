@@ -3,7 +3,7 @@
     <h1>{{ page.title }}{% if page.tagline %}<br><small>{{page.tagline}}</small>{% endif %}</h1>
     <time pubdate>{{ page.date | date_to_long_string }}</time>
     {% unless page.tags == empty %}
-    <div role="contentinfo" class="article-tags">
+    <ul role="contentinfo" class="article-tags">
       {% assign tags_list = page.tags %}
       {% include JB/tags_list %}
     </ul>
@@ -17,14 +17,19 @@
     {% include JB/comments %}
   </footer>
 </article>
-{% if page.next %}
+{% if page.previous %}
 <nav class="article-next">
   <header class="article-header">
     <a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">
-      <h1>{{ page.next.title }}{% if page.next.tagline %}<small>{{page.next.tagline}}</small>{% endif %}</h1>
+      <h1>{{ page.previous.title }}{% if page.previous.tagline %}<small>{{page.previous.tagline}}</small>{% endif %}</h1>
     </a>
-    <time pubdate>{{ page.date | date_to_long_string }}</time>
-    <tags role="contentinfo"></tags>
+    <time pubdate>{{ page.previous.date | date_to_long_string }}</time>
+    {% unless page.previous.tags == empty %}
+    <ul role="contentinfo" class="article-tags">
+      {% assign tags_list = page.previous.tags %}
+      {% include JB/tags_list %}
+    </ul>
+    {% endunless %}
   </header>
 </nav>
 {% endif %}
