@@ -1,0 +1,59 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="/assets/themes/pure/css/iframe.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var querystring = (function() {
+  var k, key, keys, kv, q, qs, v, val;
+  q = window.location.search.substr(1);
+  qs = {};
+  if (q.length) {
+    keys = q.split("&");
+    k = void 0;
+    kv = void 0;
+    key = void 0;
+    val = void 0;
+    v = void 0;
+    k = keys.length;
+    while (k--) {
+      kv = keys[k].split("=");
+      key = kv[0];
+      val = decodeURIComponent(kv[1].replace(/\+/g, " "));
+      if (qs[key] === undefined) {
+        qs[key] = val;
+      } else {
+        v = qs[key];
+        if (v.constructor !== Array) {
+          qs[key] = [];
+          qs[key].push(v);
+        }
+        qs[key].push(val);
+      }
+    }
+  }
+  return qs;
+})();
+
+{% if site.safe == false %}var disqus_developer = 1;{% endif %}
+var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}';
+var disqus_title = querystring["title"];
+var disqus_url = querystring["url"];
+var disqus_identifier = querystring["identifier"];
+console.log(disqus_title,disqus_url,disqus_identifier);
+// var disqus_title = "h";
+// var disqus_url = "http://localhost:4000/path";
+// var disqus_identifier = "http://localhost:4000/path";
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<script src="iframeResizer.contentWindow.js"></script>
+</body>
+</html>

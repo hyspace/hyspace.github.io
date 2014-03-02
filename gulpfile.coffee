@@ -9,6 +9,11 @@ streamqueue = require "streamqueue"
 assets = "./assets/themes/pure"
 
 gulp.task "less", ->
+  gulp.src "#{assets}/less/iframe.less"
+  .pipe plumber()
+  .pipe less()
+  .pipe gulp.dest "#{assets}/iframe"
+
   gulp.src "#{assets}/less/screen.less"
   .pipe plumber()
   .pipe less()
@@ -29,6 +34,6 @@ gulp.task "js", ->
 
 gulp.task "watch", ["less", "js"], ->
   gulp.watch "#{assets}/less/*.less", ["less"]
-  gulp.watch "#{assets}/coffee/*.less", ["js"]
+  gulp.watch "#{assets}/coffee/*.coffee", ["js"]
 
 gulp.task "default", ["less", "js", "watch"]

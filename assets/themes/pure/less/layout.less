@@ -18,10 +18,11 @@ body,
 }
 
 #main{
+  padding-top: 1px;
+  margin-top: -1px;
   .menu-open &{
     .translate3d(@menubar-width, 0, 0);
   }
-  overflow: auto;
   position: relative;
   z-index: 2;
   .transition-transform(.15s ease-in-out);
