@@ -31,7 +31,7 @@ published: true
 
 解压，进入`mxmx-2.6`
 
-```shell
+```sh
 ./configure --enable-shared --host=arm-linux
 
 make
@@ -39,7 +39,7 @@ make
 
 接着make报错:
 
-```shell
+```sh
 Testing library...
 
 ./testmxml test.xml > temp1.xml 2 > temp1s.xml
@@ -91,7 +91,7 @@ make: *** [testmxml] 错误   2
 
 例如
 
-```shell
+```sh
 arm-linux-gcc -o test test.c -lmxml -lpthread
 ```
 

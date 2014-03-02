@@ -10,8 +10,8 @@ markdown: redcarpet
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : <hyspace/>
-tagline: blog of a frontend engineer
+title : hyspace.io
+tagline: Blog of Shawn Zhou
 author :
   name : Shawn Zhou
   email : hyspace@gmail.com
@@ -91,7 +91,7 @@ JB :
   analytics :
     provider : google
     google :
-      tracking_id : 'UA-123-12'
+      tracking_id : 'UA-21699184-1'
 
   # Settings for sharing helper.
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
