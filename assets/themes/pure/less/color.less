@@ -25,16 +25,17 @@
 #inline-comments{
   > .inline-comment{
     > .count{
-      background-color: @gray-light;
-      color: white;
+      background-color: @gray-lighter;
+      color: @gray-light;
       &::before{
-        border-color: @gray-light transparent transparent transparent;
+        border-color: @gray-lighter transparent transparent transparent;
       }
     }
     &.hover,
     &:hover{
       > .count{
         &:hover{
+          color: white;
           background-color: @brand-primary;
             &::before{
             border-color: @brand-primary transparent transparent transparent;
@@ -44,6 +45,7 @@
     }
     &.active{
       > .count{
+        color: white;
         background-color: @brand-primary;
         &::before{
           border-color: @brand-primary transparent transparent transparent;

@@ -5,7 +5,7 @@ header : About Shawn Zhou
 comments: true
 ---
 {% include JB/setup %}
-<img src="{{ ASSET_PATH }}/images/hyspace_draw.png" alt="Shawn" width="300" height="310" style="margin:0 auto;display:block;" />
+<img src="{{ BASE_PATH }}/assets/images/hyspace_draw.png" alt="Shawn" width="300" height="310" style="margin:0 auto;display:block;" />
 
 ##Who am I?
 

@@ -18,3 +18,10 @@ features:
 - minimap
 - line numbers
 - folders
+
+
+---
+
+##update
+
+deprecated
