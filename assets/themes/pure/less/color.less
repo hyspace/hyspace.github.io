@@ -15,9 +15,44 @@
 }
 
 #btn-open-menu{
-  color: @gray;
+  color: @gray-dark;
   &:hover,
   &:active{
-    color: @gray-darker;
+    color: @brand-primary;
   }
+}
+
+#inline-comments{
+  > .inline-comment{
+    > .count{
+      background-color: @gray-light;
+      color: white;
+      &::before{
+        border-color: @gray-light transparent transparent transparent;
+      }
+    }
+    &.hover,
+    &:hover{
+      > .count{
+        &:hover{
+          background-color: @brand-primary;
+            &::before{
+            border-color: @brand-primary transparent transparent transparent;
+          }
+        }
+      }
+    }
+    &.active{
+      > .count{
+        background-color: @brand-primary;
+        &::before{
+          border-color: @brand-primary transparent transparent transparent;
+        }
+      }
+    }
+  }
+}
+
+a{
+  .transition(color .15s);
 }

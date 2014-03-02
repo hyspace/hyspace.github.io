@@ -1,4 +1,5 @@
-/*
+/*!
+ * @preserve
  * File: jquery.iframeSizer.js
  * Desc: Force cross domain iframes to size to content.
  * Requires: iframeSizer.contentWindow.js to be loaded into the target frame.

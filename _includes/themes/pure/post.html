@@ -1,9 +1,9 @@
 <article role="main">
   <header class="article-header">
-    <h1>{{ page.title }}{% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+    <h1>{{ page.title }}{% if page.tagline %}<br><small>{{page.tagline}}</small>{% endif %}</h1>
     <time pubdate>{{ page.date | date_to_long_string }}</time>
     {% unless page.tags == empty %}
-    <ul role="contentinfo" class="article-tags">
+    <div role="contentinfo" class="article-tags">
       {% assign tags_list = page.tags %}
       {% include JB/tags_list %}
     </ul>
@@ -18,11 +18,13 @@
   </footer>
 </article>
 {% if page.next %}
-<nav>
-  <a class="article-header" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">
-    <h1>{{ page.next.title }}{% if page.next.tagline %}<small>{{page.next.tagline}}</small>{% endif %}</h1>
+<nav class="article-next">
+  <header class="article-header">
+    <a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">
+      <h1>{{ page.next.title }}{% if page.next.tagline %}<small>{{page.next.tagline}}</small>{% endif %}</h1>
+    </a>
     <time pubdate>{{ page.date | date_to_long_string }}</time>
     <tags role="contentinfo"></tags>
-  </a>
+  </header>
 </nav>
 {% endif %}
