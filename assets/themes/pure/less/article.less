@@ -1,6 +1,6 @@
 .article-header{
   .page-header;
-  .clearfix();
+  overflow: hidden;
   time{
     float: right;
     color: @text-muted;
@@ -12,8 +12,14 @@
 }
 .article-next{
   > .article-header{
-    margin-top: (@line-height-computed);
+    margin-top: 0;
     border-bottom: none;
+    > a{
+      display: block;
+      &:hover{
+        text-decoration: none;
+      }
+    }
   }
   margin-top: (@line-height-computed * 4);
   border-top: 1px solid @gray-lighter;
@@ -26,20 +32,18 @@
     margin-top: 5px;
     display: block;
   }
-  > a:hover{
-    text-decoration: none;
-  }
 }
 .article-tags{
   font-size: @font-size-small;
   line-height: @line-height-computed;
   .list-inline;
+  margin-bottom: 0;
   .badge{
     font-size: @font-size-small * 0.6;
     vertical-align: top;
   }
   a{
-    opacity: 0.5;
+    opacity: 0.3;
     .transition(opacity .15s);
     &:hover{
       opacity: 1;
@@ -52,6 +56,7 @@
   .article-header{
     margin-top: @line-height-computed;
     > a{
+      display: block;
       color: @text-color;
       &:hover{
         color: @brand-primary;
@@ -59,4 +64,32 @@
       }
     }
   }
+  .timeline &{
+    margin-left: 75px;
+    .article-header{
+      padding-bottom: 0;
+      h4{
+        margin-bottom:@line-height-computed / 2;
+      }
+    }
+  }
+}
+
+.timeline{
+  .timeline-label{
+    clear: left;
+    float: left;
+    margin-left: -50px;
+    width: 100px;
+    text-align: center;
+    background-color: white;
+    h4{
+      color: @gray;
+    }
+    h5{
+      color: @gray-light;
+    }
+  }
+  margin-left: 50px;
+  border-left:1px solid @gray-lighter;
 }

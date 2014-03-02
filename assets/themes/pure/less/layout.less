@@ -19,7 +19,7 @@ body{
     .translate3d(@menubar-width, 0, 0);
   }
   position: relative;
-  z-index: 2;
+  z-index: 1;
   .transition-transform(.15s ease-in-out);
   @media (min-width: @screen-medium){
     .menu-open &{
@@ -33,6 +33,7 @@ body{
     }
   }
 }
+
 article[role="main"],
 .article-next{
   width: 100%;
@@ -49,7 +50,7 @@ article[role="main"],
   left: 0;
   bottom: 0;
   top: 0;
-  z-index: 3;
+  z-index: 4;
   width: @menubar-width;
   .translate(-@menubar-width, 0);
   .menu-open &{
@@ -84,7 +85,7 @@ article[role="main"],
 
 #header{
   position: fixed;
-  z-index: 10;
+  z-index: 3;
   left: 0;
   top: 0;
 }

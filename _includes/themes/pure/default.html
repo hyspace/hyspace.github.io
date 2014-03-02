@@ -43,10 +43,10 @@
         <li><a href="/about.html"><i class="icon-info-sign"></i>About</a></li>
       </ul>
     </nav>
+    <footer>
+      &copy; {{ site.time | date: '%Y' }} <a target="_blank" href="https://github.com/hyspace"><i class="icon-github"></i> {{ site.author.name }}</a>
+    </footer>
   </aside>
-  <footer>
-
-  </footer>
   <script src="{{ ASSET_PATH }}/js/app.js"></script>
   {% include JB/analytics %}
 </body>

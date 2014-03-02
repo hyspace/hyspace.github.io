@@ -2,10 +2,10 @@
 layout: post
 title: New jekyll theme - sublime text
 category: develop
-tags: 
-  - theme
-  - sublime text
-  - jekyll
+tags:
+- theme
+- sublime text
+- jekyll
 published: true
 ---
 

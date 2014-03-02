@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "jekyll 404 page on github"
-description: ""
 tags:
 - jekyll
-- github
+- github pages
 - custom 404 page
+published: true
 ---
 {% include JB/setup %}
 

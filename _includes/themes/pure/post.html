@@ -20,8 +20,8 @@
 {% if page.previous %}
 <nav class="article-next">
   <header class="article-header">
-    <a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">
-      <h1>{{ page.previous.title }}{% if page.previous.tagline %}<small>{{page.previous.tagline}}</small>{% endif %}</h1>
+    <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">
+      <h3>{{ page.previous.title }}{% if page.previous.tagline %}<small>{{page.previous.tagline}}</small>{% endif %}</h3>
     </a>
     <time pubdate>{{ page.previous.date | date_to_long_string }}</time>
     {% unless page.previous.tags == empty %}
