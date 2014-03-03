@@ -69,7 +69,7 @@ do ->
           $commentElement.removeClass "hover"
           return
 
-        countElement = $("<a class=\"count\" href=\"#{identifier}#disqus_thread\" data-disqus-identifier=\"#{url}#{identifier}\"></a>")
+        countElement = $("<a rel=\"nofollow\" class=\"count\" href=\"#{identifier}#disqus_thread\" data-disqus-identifier=\"#{url}#{identifier}\"></a>")
         .appendTo($commentElement.appendTo(container))
 
         return
