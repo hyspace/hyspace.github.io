@@ -63,6 +63,7 @@ do ->
 
   container.on "click", ".count", (e)->
     e.preventDefault()
+    e.stopPropagation()
     el = $ @
     parent = el.closest(".inline-comment")
     unless parent.hasClass("active")
