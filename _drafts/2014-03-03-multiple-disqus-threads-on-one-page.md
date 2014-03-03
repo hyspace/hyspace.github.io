@@ -16,12 +16,28 @@ This blog is hosted on [Github pages](http://pages.github.com/), powered by [Jek
 
 Disqus only allow one thread in a page, since it uses unique element `#disqus_thread` as its container, and it used global variables suchas `disqus_identifier`. No official solutions for multiple Disqus threads found, but somebody already noticed that and solved the problem.
 
-##Existing solutions
+##Existing solutions and problems
 
-[Mystrdat's article][1] gives 2 possible ways to
+[Mystrdat's article][1] provides 2 possible ways:
+
+* Using iframes to load Disqus threads
+* Using `Disqus.Reset` to switch between threads in one page
+
+wrotes an jQuery library by in the second way. [Demo page] looks good, but it's annoying that main thread disapears when inline thread are opened.
+
+wrotes an article about the first way. Iframe makes it possible to have multiple threads at the same time, so I decided to follow this way.
+
+##first version
+
+There are 3 main stories:
+
+* Give each passage an unique identifier
+* Show / hide comments counts
+* Show / hide Disqus threads
 
 
+###Show / hide Disqus threads
 
-
+From [guide] provided by Disqus, we can get comments
 
 [1]: http://mystrd.at/articles/multiple-disqus-threads-on-one-page/

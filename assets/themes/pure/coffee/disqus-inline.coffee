@@ -25,13 +25,14 @@ do ->
   index = 0
   record = {}
   list.each ()->
-    element = $ @
-    if element.prop("tagName") == "H2"
+    element = @
+    $element = $ element
+    if $element.prop("tagName") == "H2"
       ++section
       record = {}
     else
       do ->
-        tagName = element.prop("tagName").toLowerCase()
+        tagName = $element.prop("tagName").toLowerCase()
         if record[tagName]?
           index = record[tagName]
         else
@@ -39,25 +40,37 @@ do ->
           ++record[tagName]
 
         identifier = "section-#{section}/#{tagName}-#{index}"
-        element.attr "id", identifier
+        $element.attr "id", identifier
 
-        commentElement = $('<div class="inline-comment"></div>')
+        $commentElement = $('<div class="inline-comment"></div>')
+        commentElement = $commentElement.get(0)
+        $commentElement
         .data "identifier", identifier
         .css(
-          top: "#{element.get(0).offsetTop}px"
-          height:"#{element.get(0).offsetHeight}px"
+          top: "#{element.offsetTop}px"
+          height:"#{element.offsetHeight}px"
         )
-
-        element
         .on "mouseenter", ->
-          commentElement.addClass "hover"
+          if Math.abs(element.offsetTop - commentElement.offsetTop) > 1
+            $commentElement.css top: "#{element.offsetTop}px"
+          if Math.abs(element.offsetHeight - commentElement.offsetHeight) > 1
+            $commentElement.css height:"#{element.offsetHeight}px"
+          return
+
+        $element
+        .on "mouseenter", ->
+          $commentElement.addClass "hover"
+          if Math.abs(element.offsetTop - commentElement.offsetTop) > 1
+            $commentElement.css top: "#{element.offsetTop}px"
+          if Math.abs(element.offsetHeight - commentElement.offsetHeight) > 1
+            $commentElement.css height:"#{element.offsetHeight}px"
           return
         .on "mouseleave", ->
-          commentElement.removeClass "hover"
+          $commentElement.removeClass "hover"
           return
 
         countElement = $("<a class=\"count\" href=\"#{identifier}#disqus_thread\" data-disqus-identifier=\"#{url}#{identifier}\"></a>")
-        .appendTo(commentElement.appendTo(container))
+        .appendTo($commentElement.appendTo(container))
 
         return
 
