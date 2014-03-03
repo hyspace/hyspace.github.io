@@ -18,19 +18,25 @@
       left: @padding;
       border-radius: 2px;
       padding: 0 6px;
-      line-height: @line-height-computed;
+      line-height: @line-height-computed - 2;
       font-size: @font-size-small;
+      background-color: @body-bg;
+      color: @gray-light;
+      border: 1px solid @gray-light;
       pointer-events:none;
       opacity: 0;
       .transition(opacity .15s);
       &::before{
         content: ' ';
         position: absolute;
-        left: 6px;
-        bottom: -6px;
-        .square(0);
+        left: -4px;
+        bottom: 9px;
+        .square(7px);
+        .rotate(45deg);
         border-style: solid;
-        border-width: 8px 8px 0 0;
+        border-width: 0 0 1px 1px ;
+        border-color: @gray-light;
+        background-color: @body-bg;
       }
       &:empty{
         pointer-events:none;
@@ -51,19 +57,24 @@
         pointer-events:auto;
         opacity: 1;
         &:hover{
+          background-color: white;
           text-decoration: none;
+          &::before{
+            background-color: white;
+          }
         }
       }
     }
     &.active{
       z-index: 4;
       width: 100%;
-      > iframe{
-        // display: block;
-      }
       > .count{
+        background-color: white;
         visibility: visible;
         opacity: 1;
+        &::before{
+          background-color: white;
+        }
       }
     }
   }

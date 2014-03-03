@@ -22,39 +22,6 @@
   }
 }
 
-#inline-comments{
-  > .inline-comment{
-    > .count{
-      background-color: white;
-      color: @gray-light;
-      &::before{
-        border-color: white transparent transparent transparent;
-      }
-    }
-    &.hover,
-    &:hover{
-      > .count{
-        &:hover{
-          color: white;
-          background-color: @brand-primary;
-            &::before{
-            border-color: @brand-primary transparent transparent transparent;
-          }
-        }
-      }
-    }
-    &.active{
-      > .count{
-        color: white;
-        background-color: @brand-primary;
-        &::before{
-          border-color: @brand-primary transparent transparent transparent;
-        }
-      }
-    }
-  }
-}
-
 a{
   .transition(color .15s);
 }

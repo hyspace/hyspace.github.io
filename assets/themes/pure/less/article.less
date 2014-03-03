@@ -48,15 +48,19 @@
     color: @gray-light;
     font-size: @font-size-small * 0.6;
     vertical-align: top;
-    background-color: white;
-    border:1px solid;
+    background-color: transparent;
+    border:1px solid @gray-lighter;
   }
   a{
-    opacity: 0.3;
-    .transition(opacity .15s);
+    color: @gray-light;
+    .transition(color .15s);
     &:hover{
-      opacity: 1;
+      color: @brand-primary;
       text-decoration: none;
+      .badge{
+        color: @gray;
+        background-color: white;
+      }
     }
   }
 }
