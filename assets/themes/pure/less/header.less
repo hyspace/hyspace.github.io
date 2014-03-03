@@ -1,4 +1,4 @@
-@menu-size:60px;
+@menu-size:30px;
 
 #btn-open-menu{
   border: none;
@@ -6,9 +6,11 @@
   outline:none;
   display: block;
   text-align: center;
-  font-size: 30px;
+  font-size: @menu-size;
   .icon();
-  .square(@menu-size);
+  .size(@menu-size*2, @menu-size*2);
+  margin-left: -@menu-size/2;
+  .rotate(90deg);
   background: transparent;
   opacity: 0.3;
   .transition(~"opacity .15s ease-in-out,color .15s ease-in-out");
