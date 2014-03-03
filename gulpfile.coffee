@@ -34,7 +34,7 @@ gulp.task "js", ->
   .pipe gulp.dest "#{assets}/js"
 
 gulp.task "watch", ["less", "js"], ->
-  gulp.watch "#{assets}/less/*.less", ["less"]
-  gulp.watch "#{assets}/coffee/*.coffee", ["js"]
+  gulp.watch "#{assets}/less/**/*.less", ["less"]
+  gulp.watch ["#{assets}/coffee/*.coffee","#{assets}/js/**/*.js"], ["js"]
 
 gulp.task "default", ["less", "js", "watch"]
