@@ -15,17 +15,17 @@ body{
 #main{
   padding-top: 1px;
   margin-top: -1px;
-  .menu-open &{
-    .translate3d(@menubar-width, 0, 0);
-  }
+  .translate3d(0, 0, 0);
   position: relative;
   z-index: 1;
   .transition-transform(.15s ease-in-out);
+  .menu-open &{
+    .translate3d(@menubar-width, 0, 0);
+  }
   @media (min-width: @screen-medium){
     .menu-open &{
       .translate3d(0, 0, 0);
     }
-    .transition-transform(none);
   }
   @media (max-width: (@screen-medium - 1)){
     .comment-open &{
@@ -52,6 +52,7 @@ article[role="main"],
   top: 0;
   z-index: 4;
   width: @menubar-width;
+  .translate3d(0, 0, 0);
   .translate3d(-@menubar-width, 0, 0);
   .menu-open &{
     .translate3d(0, 0, 0);
@@ -91,6 +92,7 @@ article[role="main"],
 }
 
 #btn-open-menu{
+  .translate3d(0, 0, 0);
   .menu-open &{
     .translate3d(@menubar-width, 0, 0);
   }
