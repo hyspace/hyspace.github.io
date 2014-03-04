@@ -1,11 +1,14 @@
 ---
 layout: page
-title: 404
-tagline: page not found
+title: Err....
+tagline: Your browser is not supported
 ---
 {% include JB/setup %}
 
-* [back to home](/)
+* Get [Chrome](http://google.com/chrome)
+* Get [IE 11](http://windows.microsoft.com/en-us/internet-explorer/ie-11-worldwide-languages)
+* Get [Firefox](http://www.mozilla.org/firefox/)
+* Get [Opera](http://www.opera.com/download)
 
 <pre style="font-family: MS PGothic; font-size: medium; line-height:100%;">
 　　　　　/　 ‖ ＝只＝ ‖　ﾍ
