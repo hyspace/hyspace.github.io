@@ -19,7 +19,7 @@ do ->
   .replace(window.location.hash,'')
   .replace(/\/index.html?$/i,'/')
 
-  container = $('#inline-comments')
+  container = $("<aside id=\"inline-comments\"></aside>").appendTo($("#main"))
 
   section = 0
   index = 0

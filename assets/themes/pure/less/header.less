@@ -1,4 +1,4 @@
-@menu-size:30px;
+@menu-size:40px;
 
 #btn-open-menu{
   border: none;
@@ -13,7 +13,9 @@
   .rotate(90deg);
   background: transparent;
   opacity: 0.3;
-  .transition(~"opacity .15s ease-in-out, color .15s ease-in-out, transform .15s ease-in-out, -webkit-transform .15s ease-in-out");
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
+  .transition(~"opacity .15s ease-in-out, color .15s ease-in-out");
   &:hover{
     opacity: 1;
   }
