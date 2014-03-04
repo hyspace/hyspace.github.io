@@ -87,22 +87,23 @@
       }
     }
   }
-  .timeline &{
-    margin-left: 75px;
+}
+
+.timeline{
+  @size:80px;
+  .article-list{
+    margin-left: @size*0.75;
     .article-header{
       h4{
         margin-bottom:@line-height-computed / 2;
       }
     }
   }
-}
-
-.timeline{
   .timeline-label{
     clear: left;
     float: left;
-    margin-left: -50px;
-    width: 100px;
+    margin-left: -@size/2;
+    width: @size;
     text-align: center;
     background-color: @body-bg;
     h4{
@@ -112,6 +113,6 @@
       color: @gray-light;
     }
   }
-  margin-left: 50px;
+  margin-left: @size/2;
   border-left:1px solid @gray-lighter;
 }
