@@ -1,8 +1,8 @@
 .article-header{
   .page-header;
   overflow: hidden;
-  padding-bottom: 0;
   time{
+    font-weight: 200;
     float: right;
     color: @text-muted;
     font-size: @font-size-small * 0.8;
@@ -43,10 +43,12 @@
 }
 .article-tags{
   font-size: @font-size-small * 0.8;
+  font-weight: 200;
   line-height: @line-height-computed;
   .list-inline;
   margin-bottom: 0;
   .badge{
+    font-weight: 200;
     color: @gray-light;
     font-size: @font-size-small * 0.6;
     vertical-align: text-bottom;
@@ -71,6 +73,7 @@
   .article-header{
     margin-top: @line-height-computed;
     margin-bottom: @line-height-computed;
+    border-bottom: none;
     > a{
       display: block;
       color: @text-color;
@@ -83,7 +86,6 @@
   .timeline &{
     margin-left: 75px;
     .article-header{
-      padding-bottom: 0;
       h4{
         margin-bottom:@line-height-computed / 2;
       }

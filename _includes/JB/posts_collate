@@ -37,6 +37,10 @@ Usage:
     <li class="article-header">
       <a href="{{post.url}}"><h4>{{ post.title }}{% if post.tagline %}<br><small>{{post.tagline}}</small>{% endif %}</h4></a>
       <time pubdate>{{ post.date | date_to_long_string }}</time>
+      <ul role="contentinfo" class="article-tags">
+        {% assign tags_list = post.tags %}
+        {% include JB/tags_list %}
+      </ul>
     </li>
 
     {% if forloop.last %}
