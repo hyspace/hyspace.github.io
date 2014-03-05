@@ -1,5 +1,3 @@
-$('#menu-sidebar').show()
-
 $("<div id=\"mask\" data-toggle-menu></div>").appendTo($("#main"))
 
 $('[data-toggle-menu]')

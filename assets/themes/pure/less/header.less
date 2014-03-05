@@ -1,6 +1,9 @@
 @menu-size:48px;
 
 #btn-open-menu{
+  .js &{
+    .transition(~"opacity .15s ease-in-out, color .15s ease-in-out");
+  }
   border: none;
   padding: 0;
   outline:none;
@@ -15,7 +18,6 @@
   opacity: 0.3;
   // -webkit-font-smoothing: none;
   // -moz-osx-font-smoothing: none;
-  .transition(~"opacity .15s ease-in-out, color .15s ease-in-out");
   &:hover{
     opacity: 1;
   }
