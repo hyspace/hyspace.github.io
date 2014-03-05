@@ -1,3 +1,8 @@
+$ ->
+  $(document.documentElement)
+  .removeClass("nojs")
+  .addClass("domready")
+
 $("<div id=\"mask\" data-toggle-menu></div>").appendTo($("#main"))
 
 $('[data-toggle-menu]')
