@@ -77,11 +77,11 @@ The second way is better for that we saved a http request and that no special fi
 From [MSDN](http://msdn.microsoft.com/en-us/library/cc848897(v=VS.85).aspx) we know:
 
 > Data URIs are supported only for the following elements and/or attributes.
-> - object (images only)
-> - img
-> - input type=image
-> - link
-> - CSS declarations that accept a URL, such as background, backgroundImage, and so on.
+> * object (images only)
+> * img
+> * input type=image
+> * link
+> * CSS declarations that accept a URL, such as background, backgroundImage, and so on.
 
 So the second one is out. Let's discuss the third one. For both iframe with src of dataURL or `about:blank`, the browser consider it as document in the same domain with main page. We can directly control its content by `document.write`. See [Eric Anderson's article](http://sparecycles.wordpress.com/2012/03/08/inject-content-into-a-new-iframe/)
 
@@ -123,7 +123,7 @@ This is much simpler. just do it with jQuery.
 
 The first demo of this is my own blog. Try to add some inline comment in this page!
 
-I havn't, but will write an jQuery lib for this. Wait for it or see [code](https://github.com/hyspace/hyspace.github.io/blob/master/assets/themes/pure/coffee/disqus-inline.coffee) here now for help.
+I haven't, but will write an jQuery lib for this. Wait for it or see [code](https://github.com/hyspace/hyspace.github.io/blob/master/assets/themes/pure/coffee/disqus-inline.coffee) here now for help.
 
 
 [1]: http://mystrd.at/articles/multiple-disqus-threads-on-one-page/
