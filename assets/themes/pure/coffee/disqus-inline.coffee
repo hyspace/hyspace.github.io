@@ -121,7 +121,7 @@ do ->
         iframe.contentWindow.document.close()
 
         $(iframe)
-        .fadeIn()
+        .show()
         .iFrameResize
           log: false
           autoResize: true
@@ -132,7 +132,7 @@ do ->
           interval:100
           scrolling:false
       else
-        parent.children("iframe").fadeIn()
+        parent.children("iframe").show()
     else
       $(document.body).removeClass("comment-open")
       parent.removeClass("active")
