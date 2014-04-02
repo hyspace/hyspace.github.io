@@ -92,6 +92,18 @@ So the second one is out. Let's discuss the third one. For both iframe with src 
 
 What we should do is to create an iframe with its `src` set to `about:blank`, and then write all its content, including info about thread to load:
 
+```js
+var iframe = document.createElement('iframe')
+iframe.allowtransparency = true
+iframe.src = "about:blank"
+someNode.appendChild(iframe)
+iframe.contentWindow.document.open('text/html', 'replace')
+iframe.contentWindow.document.write(/* HTML code */)
+iframe.contentWindow.document.close()
+```
+
+The HTML code may looks like:
+
 ```html
 <body>
   <div id="disqus_thread"></div>
