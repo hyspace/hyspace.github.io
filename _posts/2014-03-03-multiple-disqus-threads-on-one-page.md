@@ -74,7 +74,7 @@ In the first way, we can include scripts in the special HTML file to communicate
 
 The second way is better for that we saved a http request and that no special file is required. But IE doesn't support it.
 
-From [MSDN](http://msdn.microsoft.com/en-us/library/cc848897(v=VS.85).aspx) we know:
+From [MSDN](http://msdn.microsoft.com/en-us/library/cc848897) we know:
 
 > Data URIs are supported only for the following elements and/or attributes.
 > * object (images only)
