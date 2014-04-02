@@ -28,7 +28,7 @@ However, Disqus only allow one thread in a page, since it uses unique element `#
 
 [Claudio](http://www.devinterface.com/blog/author/claudio/) wrotes [an article about the first way](http://www.devinterface.com/blog/2012/01/how-to-insert-more-disqus-box-in-single-page/). Iframe makes it possible to have multiple threads at the same time, so I decided to follow this way.
 
-##first version
+##Let's start!
 
 There are 3 main work to do:
 
@@ -62,13 +62,13 @@ This is the most difficult part. There are serveral steps to accomplish this.
 2. adjust height of `iframe` when inner iframe's size changes
 3. hide `iframe` instead of destory it when user close thread, so we only need initialize `iframe` one time.
 
-####insert iframe
+####Insert iframe
 
 We should use source of `iframes` that under ours control, so it can't be an cross site one. There are 3 choices.
 
 1. An special static HTML file exists in our jekell blog.
 2. base64 url
-3. about:blank
+3. `about:blank`
 
 In the first way, we can include scripts in the special HTML file to communicate with the main page. But there are several shortcomings. First, it will cost at least one more http request to load a thread. The inner iframe's loading will be delayed. Second, this will force user to create an special file in thier blog instead of just change a theme.
 
@@ -114,7 +114,7 @@ I found an small lib for this: [iframe-resizer](https://github.com/davidjbradsha
 
 We should include the iframe part of the lib into our `iframe`, and include main file into our main page, so that the height of our `iframe` will be auto set to its content.
 
-####show and hide `iframe`
+####Show and hide `iframe`
 
 This is much simpler. just do it with jQuery.
 
