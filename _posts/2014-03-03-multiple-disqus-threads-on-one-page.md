@@ -78,15 +78,15 @@ From [MSDN](http://msdn.microsoft.com/en-us/library/cc848897) we know:
 
 > Data URIs are supported only for the following elements and/or attributes.
 
->  object (images only)
+> - object (images only)
 
->  img
+> - img
 
->  input type=image
+> - input type=image
 
->  link
+> - link
 
->  CSS declarations that accept a URL, such as background, backgroundImage, and so on.
+> - CSS declarations that accept a URL, such as background, backgroundImage, and so on.
 
 So the second one is out. Let's discuss the third one. For both iframe with src of dataURL or `about:blank`, the browser consider it as document in the same domain with main page. We can directly control its content by `document.write`. See [Eric Anderson's article](http://sparecycles.wordpress.com/2012/03/08/inject-content-into-a-new-iframe/)
 
