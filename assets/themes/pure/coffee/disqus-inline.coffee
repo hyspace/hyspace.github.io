@@ -35,9 +35,9 @@ do ->
         tagName = $element.prop("tagName").toLowerCase()
         if record[tagName]?
           index = record[tagName]
+          ++record[tagName]
         else
           index = record[tagName] = 1
-          ++record[tagName]
 
         identifier = "section-#{section}/#{tagName}-#{index}"
         $element.attr "id", identifier
