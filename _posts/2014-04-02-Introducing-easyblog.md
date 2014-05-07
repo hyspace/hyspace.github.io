@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introducing easyblog
-tagline: "a tool\_makes blogging on Github Pages easier."
+tagline: a tool makes blogging on Github Pages easier.
 category: null
 tags: []
 published: false
