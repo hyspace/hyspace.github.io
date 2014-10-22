@@ -10,5 +10,5 @@ $('[data-toggle-menu]')
   $(document.body).toggleClass 'menu-open'
   return
 
-$(window).unload ->
+$(window).on "unload", ->
   $(document.body).removeClass()
