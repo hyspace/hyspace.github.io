@@ -4,7 +4,8 @@ title: Introducing easyblog
 tagline: a tool makes blogging on Github Pages easier.
 category: null
 tags: []
-published: false---
+published: false
+---
 I noticed that I merely wrote nothing since I migrate my blog to Github Pages. That's strange. jekyll is an awful tool, and Github Pages is the best place for programmers to write posts, since jekyll supports GFM, fully customizable, and allows user to include script in posts. 
 
 What's more,
