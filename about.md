@@ -9,7 +9,7 @@ comments: true
 
 ##Who am I?
 
-My name is Shan Zhou ( Shawn ), a front-end engineer.
+My name is Shan Zhou ( Shawn ), a software engineer.
 
 <p><script>
 (function () {
@@ -18,11 +18,9 @@ My name is Shan Zhou ( Shawn ), a front-end engineer.
   var age = d.getFullYear()-birthday.getFullYear()-((d.getMonth()<birthday.getMonth()|| d.getMonth()==birthday.getMonth() && d.getDate()<birthday.getDate())?1:0);
   document.write(age);
 })();
-</script> years old, living in Beijing.</p>
+</script> years old, living in San Jose, CA.</p>
 
-Focused on software development, especially front-end development, and also interested in consumer electronics and web designing.
-
-Speak Chinese, English and Japanese.  Love Anime, Game and Travelling.
+Speak Chinese, English and Japanese. Love Japanese Anime and Game.
 
 ---------------------
 
