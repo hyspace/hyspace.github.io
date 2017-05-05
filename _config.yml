@@ -10,7 +10,7 @@ title: hyspace.moe
 email: hyspace@gmail.com
 description: Blog of Shawn Zhou
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://hyspace.moe" # the base hostname & protocol for your site
+url: "http://hyspace.moe" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
