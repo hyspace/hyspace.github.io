@@ -1,5 +1,17 @@
 ---
 layout: default
 ---
-{% include JB/setup %}
-{% include themes/pure/page.html %}
+
+<article role="main">
+  <header class="article-header">
+    <h1>{{ page.title }}{% if page.tagline %}<br><small>{{ page.tagline }}</small>{% endif %}</h1>
+  </header>
+  <div class="article-content">
+    {{ content }}
+  </div>
+  {% if page.comments %}
+  <footer class="article-comments">
+    {% include dq.html %}
+  </footer>
+  {% endif %}
+</article>

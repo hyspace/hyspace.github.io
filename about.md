@@ -4,10 +4,8 @@ title : About
 header : About Shawn Zhou
 comments: true
 ---
-{% include JB/setup %}
-![Shawn](/assets/images/hyspace_draw.png)
 
-##Who am I?
+## Who am I?
 
 My name is Shan Zhou ( Shawn ), a software engineer.
 
@@ -24,9 +22,9 @@ Speak Chinese, English and Japanese. Love Japanese Anime and Game.
 
 ---------------------
 
-##What does "hyspace" mean?
+## What does "hyspace" mean?
 
-###hyspace
+### hyspace
 
 `[haɪspeis]`
 

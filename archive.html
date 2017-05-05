@@ -4,9 +4,52 @@ title : Archive
 header : Post Archive
 group: navigation
 ---
-{% include JB/setup %}
 
 <div class="timeline">
-{% assign posts_collate = site.posts %}
-{% include JB/posts_collate %}
+
+  {% assign posts_collate = site.posts %}
+
+  {% for post in posts_collate  %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+    {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
+
+    {% if forloop.first %}
+      <div class="timeline-label">
+        <h4>{{this_year}}</h4>
+        <h5>{{this_month}}</h5>
+      </div>
+      <ul class="article-list">
+    {% endif %}
+
+    <li class="article-header">
+      <a href="{{post.url}}"><h4>{{ post.title }}{% if post.tagline %}<br><small>{{post.tagline}}</small>{% endif %}</h4></a>
+      <time pubdate>{{ post.date | date_to_long_string }}</time>
+    </li>
+
+    {% if forloop.last %}
+      </ul>
+    {% else %}
+      {% if this_year != next_year %}
+        </ul>
+        <div class="timeline-label">
+          <h4>{{next_year}}</h4>
+          <h5>{{next_month}}</h5>
+        </div>
+        <ul class="article-list">
+      {% else %}
+        {% if this_month != next_month %}
+          </ul>
+          <div class="timeline-label">
+            <h5>{{next_month}}</h5>
+          </div>
+          <ul class="article-list">
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
 </div>
+
+

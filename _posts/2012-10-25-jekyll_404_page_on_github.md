@@ -7,7 +7,6 @@ tags:
 - custom 404 page
 published: true
 ---
-{% include JB/setup %}
 
 在github pages的说明页中写道：
 
@@ -22,7 +21,6 @@ published: true
     title: 404
     tagline: Page does't exist
     ---
-    {% include JB/setup %}
 
     * [back to home](/)
 

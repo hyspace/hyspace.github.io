@@ -9,7 +9,6 @@ tags:
 published: true
 ---
 
-{% include JB/setup %}
 
 I love sublime text so much, so I made a theme for it.
 

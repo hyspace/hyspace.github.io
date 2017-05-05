@@ -3,7 +3,6 @@ layout: page
 title: Err....
 tagline: Your browser is not supported
 ---
-{% include JB/setup %}
 
 * Get [Chrome](http://google.com/chrome)
 * Get [IE 11](http://windows.microsoft.com/en-us/internet-explorer/ie-11-worldwide-languages)

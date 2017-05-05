@@ -1,6 +1,27 @@
----
-theme :
-  name : pure
----
-{% include JB/setup %}
-{% include themes/pure/default.html %}
+<!DOCTYPE html>
+<html class="nojs">
+{% include head.html %}
+<body>
+  <div id="main-warp">
+    <div id="main">
+      {{ content }}
+    </div>
+  </div>
+  <header id="header">
+    <button id="btn-open-menu" data-toggle-menu>_</button>
+  </header>
+  <aside id="menu-sidebar">
+    <nav>
+      <ul class="menu">
+        <li><a href="/"><i class="icon-home"></i>Home</a></li>
+        <li><a href="/archive.html"><i class="icon-book"></i>Archive</a></li>
+        <li><a href="/about.html"><i class="icon-info-sign"></i>About</a></li>
+      </ul>
+    </nav>
+    <footer>
+      &copy; {{ site.time | date: '%Y' }} <a target="_blank" href="https://github.com/hyspace">{{ site.author.name }} <i class="icon-cat"></i></a>
+    </footer>
+  </aside>
+  <div id="mask" data-toggle-menu></div>
+</body>
+</html>

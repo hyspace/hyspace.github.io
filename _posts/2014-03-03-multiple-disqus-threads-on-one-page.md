@@ -7,7 +7,6 @@ tags:
   - develop
 published: true
 ---
-{% include JB/setup %}
 
 ##Why multiple Disqus threads
 
